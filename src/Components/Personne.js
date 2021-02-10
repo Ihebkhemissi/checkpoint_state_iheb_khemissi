@@ -6,7 +6,8 @@ class Personne extends React.Component {
         interval : null
     }
 
-componentDidMount(){this.setstate({
+componentDidMount(){
+    this.setState({
         interval:setInterval(()=>{
         this.setState({timer:this.state.timer + 1});
     },1000)
@@ -22,6 +23,7 @@ componentWillUnmount(){
                     <h2 className="bio" > Num 54445287 </h2>
                     <img src="iheb.jpg" alt="iheb" style={{width:"50%" , height:"50%"}}/>
                     <h2 className="pofession">IT devoloper</h2>
+                    <h3>{this.state.timer}</h3>
                 </div>
         );
     }
